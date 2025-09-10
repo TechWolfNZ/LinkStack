@@ -95,10 +95,18 @@ foreach($pages as $page)
                       </a>
                     </li>
                     @endif
+                    <li>WHATcreatedAThome</li>
                     @if(!empty(env('GITHUB_CLIENT_ID')))
                     <li class="list-group-item border-0 pb-0">
                       <a href="{{ route('social.redirect','github') }}">
                         <i class="bi bi-github"></i>
+                      </a>
+                    </li>
+                    @endif
+                    @if(!empty(env('AUTHENTIK_CLIENT_ID')))
+                    <li class="list-group-item border-0 pb-0">
+                      <a href="{{ route('social.redirect','authentik') }}">
+                        - Login With WolfTech WolfTech -
                       </a>
                     </li>
                     @endif
